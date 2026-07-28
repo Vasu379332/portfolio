@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vasu — Software Developer & Final Year IT Student</title>
+  <meta name="description" content="Portfolio of Vasu, a Final Year B.Tech IT student and software developer specializing in Python, web development, and machine learning." />
+  <meta name="theme-color" content="#0F172A" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Vasu — Software Developer" />
+  <meta property="og:description" content="Final Year B.Tech IT Student | Software Developer | Python Developer | Web Developer" />
+  <meta property="og:type" content="website" />
+
+  <!-- Fonts: Sora (display), Inter (body), JetBrains Mono (code/labels) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- AOS scroll animations -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ===================== Loading Screen ===================== -->
+  <div id="loader" aria-hidden="true">
+    <div class="loader-mark">
+      <span class="loader-bracket">&lt;</span>
+      <span class="loader-name">Vasu</span>
+      <span class="loader-bracket">/&gt;</span>
+    </div>
+    <div class="loader-bar"><span></span></div>
+  </div>
+
+  <!-- ===================== Scroll Progress ===================== -->
+  <div id="scroll-progress" aria-hidden="true"><span id="scroll-progress-bar"></span></div>
+
+  <!-- ===================== Custom Cursor ===================== -->
+  <div class="cursor-dot" aria-hidden="true"></div>
+  <div class="cursor-ring" aria-hidden="true"></div>
+
+  <!-- ===================== Ambient Background ===================== -->
+  <div class="bg-ambient" aria-hidden="true">
+    <span class="blob blob-blue"></span>
+    <span class="blob blob-purple"></span>
+    <span class="blob blob-cyan"></span>
+    <canvas id="particles"></canvas>
+  </div>
+
+  <!-- ===================== Navbar ===================== -->
+  <header class="navbar" id="navbar">
+    <nav class="nav-inner container">
+      <a href="#home" class="brand"><span class="brand-bracket">&lt;</span>Vasu<span class="brand-bracket">/&gt;</span></a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#github" class="nav-link">GitHub</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button id="themeToggle" class="icon-btn" aria-label="Toggle light and dark mode" title="Toggle theme">
+          <i class="fa-solid fa-moon"></i>
+        </button>
+        <a href="assets/Vasu_Resume.pdf" download class="btn btn-sm btn-outline nav-resume">
+          <i class="fa-solid fa-arrow-down-to-line"></i> Resume
+        </a>
+        <button id="navToggle" class="nav-toggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="home">
+
+    <!-- ===================== Hero Section ===================== -->
+    <section class="hero container">
+      <div class="hero-text" data-aos="fade-up">
+        <p class="eyebrow"><span class="dot-live"></span>$ open-to-work --role="SDE Intern"</p>
+        <h1 class="hero-heading">
+          Hi, I'm <span class="gradient-text">Vasu</span>
+        </h1>
+        <p class="hero-subtitle">
+          Final Year B.Tech IT Student <span class="sep">/</span> Software Developer
+          <span class="sep">/</span> Python Developer <span class="sep">/</span> Web Developer
+        </p>
+        <p class="hero-desc">
+          I enjoy building web applications, solving real-world problems with technology,
+          and continuously learning new tools in software development.
+        </p>
+
+        <div class="hero-actions">
+          <a href="assets/Vasu_Resume.pdf" download class="btn btn-primary">
+            <i class="fa-solid fa-arrow-down-to-line"></i> Download Resume
+          </a>
+          <a href="#projects" class="btn btn-ghost">
+            <i class="fa-solid fa-diagram-project"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn-ghost">
+            <i class="fa-solid fa-paper-plane"></i> Contact Me
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-number" data-count="4">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Projects Built</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="10">0</span><span class="stat-plus">+</span>
+            <span class="stat-label">Tech &amp; Tools</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="4">0</span>
+            <span class="stat-label">Certifications</span>
+          </div>
+          <div class="stat">
+            <span class="stat-number" data-count="2027">0</span>
+            <span class="stat-label">Graduating</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-visual" data-aos="fade-left" data-aos-delay="150">
+        <div class="terminal-window" role="img" aria-label="Terminal window animating a developer profile snippet">
+          <div class="terminal-bar">
+            <span class="tdot tdot-red"></span><span class="tdot tdot-yellow"></span><span class="tdot tdot-green"></span>
+            <span class="terminal-title">vasu@dev: ~/portfolio</span>
+          </div>
+          <pre class="terminal-body"><code id="typedCode"></code><span class="caret">&#9608;</span></pre>
+        </div>
+        <div class="floating-card card-1"><i class="fa-brands fa-python"></i> Python</div>
+        <div class="floating-card card-2"><i class="fa-brands fa-js"></i> JavaScript</div>
+        <div class="floating-card card-3"><i class="fa-solid fa-database"></i> SQL</div>
+      </div>
+    </section>
+
+    <!-- ===================== About Section ===================== -->
+    <section class="section" id="about">
+      <div class="container">
+        <p class="section-tag">$ cd ~/about</p>
+        <h2 class="section-title">About Me</h2>
+
+        <div class="about-grid">
+          <div class="about-copy" data-aos="fade-right">
+            <p>
+              I'm a final-year <strong>B.Tech Information Technology</strong> student and a
+              passionate <strong>software developer</strong> who enjoys turning ideas into working
+              products. My interests span <strong>Python development, web development, artificial
+              intelligence, and cloud computing</strong> — and I like understanding how systems fit
+              together, not just how to make them run.
+            </p>
+            <p>
+              I pick up new tools quickly, enjoy breaking down problems into manageable pieces, and
+              genuinely like the process of debugging until something finally clicks. I collaborate
+              well in teams, communicate clearly, and treat every project as a chance to sharpen my
+              technical skills a little further.
+            </p>
+            <p>
+              Currently, I'm looking for a <strong>Software Development Internship</strong> where I
+              can contribute to real products while continuing to grow as an engineer.
+            </p>
+
+            <ul class="about-traits">
+              <li><i class="fa-solid fa-bolt"></i> Quick Learner</li>
+              <li><i class="fa-solid fa-puzzle-piece"></i> Problem Solver</li>
+              <li><i class="fa-solid fa-people-group"></i> Team Player</li>
+              <li><i class="fa-solid fa-arrow-trend-up"></i> Always Improving</li>
+            </ul>
+          </div>
+
+          <div class="about-panel" data-aos="fade-left">
+            <div class="glass-card about-focus">
+              <h3>Focus Areas</h3>
+              <div class="focus-item">
+                <div class="focus-head"><span>Python Development</span><span>90%</span></div>
+                <div class="focus-bar"><span style="--w:90%"></span></div>
+              </div>
+              <div class="focus-item">
+                <div class="focus-head"><span>Web Development</span><span>85%</span></div>
+                <div class="focus-bar"><span style="--w:85%"></span></div>
+              </div>
+              <div class="focus-item">
+                <div class="focus-head"><span>AI &amp; Machine Learning</span><span>50%</span></div>
+                <div class="focus-bar"><span style="--w:50%"></span></div>
+              </div>
+              <div class="focus-item">
+                <div class="focus-head"><span>Cloud Computing</span><span>65%</span></div>
+                <div class="focus-bar"><span style="--w:65%"></span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Skills Section ===================== -->
+    <section class="section section-alt" id="skills">
+      <div class="container">
+        <p class="section-tag">$ ls ~/skills</p>
+        <h2 class="section-title">Skills</h2>
+
+        <div class="skills-grid">
+          <!-- Programming -->
+          <div class="glass-card skill-category" data-aos="fade-up">
+            <h3><i class="fa-solid fa-code"></i> Programming</h3>
+            <div class="skill-row">
+              <div class="skill-head"><span><i class="fa-brands fa-python"></i> Python</span><span>85%</span></div>
+              <div class="skill-bar"><span style="--w:85%"></span></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-head"><span><i class="fa-solid fa-c"></i> C</span><span>75%</span></div>
+              <div class="skill-bar"><span style="--w:75%"></span></div>
+            </div>
+          </div>
+
+          <!-- Frontend -->
+          <div class="glass-card skill-category" data-aos="fade-up" data-aos-delay="80">
+            <h3><i class="fa-solid fa-display"></i> Frontend</h3>
+            <div class="skill-row">
+              <div class="skill-head"><span><i class="fa-brands fa-html5"></i> HTML</span><span>90%</span></div>
+              <div class="skill-bar"><span style="--w:90%"></span></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-head"><span><i class="fa-brands fa-css3-alt"></i> CSS</span><span>85%</span></div>
+              <div class="skill-bar"><span style="--w:85%"></span></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-head"><span><i class="fa-brands fa-js"></i> JavaScript</span><span>80%</span></div>
+              <div class="skill-bar"><span style="--w:80%"></span></div>
+            </div>
+          </div>
+
+          <!-- Database -->
+          <div class="glass-card skill-category" data-aos="fade-up" data-aos-delay="160">
+            <h3><i class="fa-solid fa-database"></i> Database</h3>
+            <div class="skill-row">
+              <div class="skill-head"><span><i class="fa-solid fa-server"></i> SQL</span><span>80%</span></div>
+              <div class="skill-bar"><span style="--w:80%"></span></div>
+              <div class="skill-head"><span><i class="fa-solid fa-server"></i> MySQL</span><span>70%</span></div>
+              <div class="skill-bar"><span style="--w:70%"></span></div>
+              <div class="skill-head"><span><i class="fa-solid fa-server"></i> MongoDB</span><span>70%</span></div>
+              <div class="skill-bar"><span style="--w:70%"></span></div>
+            </div>
+          </div>
+
+          <!-- Cloud & OS -->
+          <div class="glass-card skill-category" data-aos="fade-up">
+            <h3><i class="fa-solid fa-cloud"></i> Cloud &amp; OS</h3>
+            <div class="skill-row">
+              <div class="skill-head"><span><i class="fa-brands fa-aws"></i> AWS Basics</span><span>60%</span></div>
+              <div class="skill-bar"><span style="--w:60%"></span></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-head"><span><i class="fa-brands fa-linux"></i> Linux</span><span>70%</span></div>
+              <div class="skill-bar"><span style="--w:70%"></span></div>
+            </div>
+          </div>
+
+          <!-- CS Fundamentals -->
+          <div class="glass-card skill-category" data-aos="fade-up" data-aos-delay="80">
+            <h3><i class="fa-solid fa-graduation-cap"></i> CS Fundamentals</h3>
+            <div class="skill-row">
+              <div class="skill-head"><span>DBMS</span><span>80%</span></div>
+              <div class="skill-bar"><span style="--w:80%"></span></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-head"><span>Data Structures &amp; Algorithms</span><span>75%</span></div>
+              <div class="skill-bar"><span style="--w:75%"></span></div>
+            </div>
+            <div class="skill-row">
+              <div class="skill-head"><span>Computer Networking</span><span>70%</span></div>
+              <div class="skill-bar"><span style="--w:70%"></span></div>
+            </div>
+          </div>
+
+          <!-- Tools -->
+          <div class="glass-card skill-category" data-aos="fade-up" data-aos-delay="160">
+            <h3><i class="fa-solid fa-toolbox"></i> Tools</h3>
+            <div class="tool-chips">
+              <span class="chip"><i class="fa-solid fa-code-branch"></i> Git</span>
+              <span class="chip"><i class="fa-brands fa-github"></i> GitHub</span>
+              <span class="chip"><i class="fa-solid fa-laptop-code"></i> VS Code</span>
+              <span class="chip"><i class="fa-brands fa-hackerrank"></i> HackerRank</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Projects Section ===================== -->
+    <section class="section" id="projects">
+      <div class="container">
+        <p class="section-tag">$ ls ~/projects</p>
+        <h2 class="section-title">Projects</h2>
+
+        <div class="project-controls" data-aos="fade-up">
+          <div class="project-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="projectSearch" placeholder="Search projects (e.g. Python, Flask, ML)…" aria-label="Search projects" />
+          </div>
+          <div class="project-filters" id="projectFilters">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="python">Python</button>
+            <button class="filter-btn" data-filter="javascript">JavaScript</button>
+            <button class="filter-btn" data-filter="ml">Machine Learning</button>
+            <button class="filter-btn" data-filter="flask">Flask</button>
+            <button class="filter-btn" data-filter="database">Database</button>
+          </div>
+        </div>
+
+        <div class="projects-grid" id="projectsGrid">
+
+          <article class="glass-card project-card" data-tags="javascript html css" data-aos="fade-up">
+            <div class="project-top">
+              <span class="project-icon"><i class="fa-solid fa-microphone-lines"></i></span>
+              <span class="project-status status-live">Live</span>
+            </div>
+            <h3>Virtual Assistant</h3>
+            <p>A web-based virtual assistant built using HTML, CSS, and JavaScript, offering natural voice interaction inside a clean, responsive interface.</p>
+            <ul class="project-features">
+              <li>Voice interaction</li>
+              <li>Responsive interface</li>
+              <li>Interactive design</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JavaScript</span>
+            </div>
+            <div class="project-links">
+              <a href="#" class="btn btn-sm btn-primary"><i class="fa-solid fa-play"></i> Live Demo</a>
+              <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+            </div>
+          </article>
+
+          <article class="glass-card project-card" data-tags="python flask ml" data-aos="fade-up" data-aos-delay="80">
+            <div class="project-top">
+              <span class="project-icon"><i class="fa-solid fa-seedling"></i></span>
+              <span class="project-status status-live">Live</span>
+            </div>
+            <h3>AI-Based Crop Recommendation System</h3>
+            <p>A Python and Flask application that recommends suitable crops using agricultural data, built with a farmer-friendly interface.</p>
+            <ul class="project-features">
+              <li>Smart crop recommendations</li>
+              <li>SQLite database</li>
+              <li>Farmer-friendly interface</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tag">Python</span><span class="tag">Flask</span><span class="tag">SQLite</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-sm btn-ghost"><i class="fa-solid fa-file-lines"></i> Case Study</a>
+            </div>
+          </article>
+
+          <article class="glass-card project-card" data-tags="python flask database mysql mongodb" data-aos="fade-up" data-aos-delay="160">
+            <div class="project-top">
+              <span class="project-icon"><i class="fa-solid fa-cart-shopping"></i></span>
+              <span class="project-status status-live">Live</span>
+            </div>
+            <h3>Supermarket Inventory Management System</h3>
+            <p>A full-stack inventory solution for supermarkets with stock tracking, supplier management, and low-stock alerts built using Python and Flask.</p>
+            <ul class="project-features">
+              <li>Real-time stock tracking</li>
+              <li>Supplier and product management</li>
+              <li>Low-stock alerts and reporting</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tag">Python</span><span class="tag">Flask</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-sm btn-ghost"><i class="fa-solid fa-boxes-stacked"></i> Overview</a>
+            </div>
+          </article>
+
+          <article class="glass-card project-card" data-tags="python ml" data-aos="fade-up" data-aos-delay="240">
+            <div class="project-top">
+              <span class="project-icon"><i class="fa-solid fa-user-shield"></i></span>
+              <span class="project-status status-dev">In Progress</span>
+            </div>
+            <h3>Fake Job &amp; Internship Detection System</h3>
+            <p>A machine learning-based system to detect fraudulent job postings and help candidates search for opportunities more safely.</p>
+            <ul class="project-features">
+              <li>Fraud detection</li>
+              <li>Data analysis</li>
+              <li>Safer job searching</li>
+            </ul>
+            <div class="project-tech">
+              <span class="tag">Python</span><span class="tag">Machine Learning</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/" target="_blank" rel="noopener" class="btn btn-sm btn-outline"><i class="fa-brands fa-github"></i> GitHub</a>
+              <span class="btn btn-sm btn-disabled"><i class="fa-solid fa-clock"></i> Coming Soon</span>
+            </div>
+          </article>
+
+        </div>
+
+        <p class="project-empty" id="projectEmpty" hidden>No projects match your search — try a different keyword.</p>
+      </div>
+    </section>
+
+    <!-- ===================== Education Section ===================== -->
+    <section class="section section-alt" id="education">
+      <div class="container">
+        <p class="section-tag">$ cat ~/education.log</p>
+        <h2 class="section-title">Education</h2>
+
+        <div class="timeline">
+          <div class="timeline-item" data-aos="fade-up">
+            <div class="timeline-dot"></div>
+            <div class="glass-card timeline-card">
+              <div class="timeline-head">
+                <h3>B.Tech, Information Technology</h3>
+                <span class="timeline-year">2023 – 2027</span>
+              </div>
+              <p class="timeline-org">Meerut Institute of Engineering and Technology</p>
+              <p class="timeline-meta">CGPA: <strong>7.7</strong></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Certificates -->
+        <h3 class="sub-heading" data-aos="fade-up">Certificates</h3>
+        <div class="cert-grid">
+          <div class="glass-card cert-card" data-aos="fade-up">
+            <span class="cert-icon"><i class="fa-solid fa-certificate"></i></span>
+            <h4>SQL Certification</h4>
+            <p>Database design, SQL queries, joins, subqueries, indexing, and normalization.</p>
+          </div>
+          <div class="glass-card cert-card" data-aos="fade-up" data-aos-delay="80">
+            <span class="cert-icon"><i class="fa-solid fa-leaf"></i></span>
+            <h4>MongoDB Database Fundamentals</h4>
+            <p>Core concepts of MongoDB, document modeling, and database fundamentals.</p>
+          </div>
+          <div class="glass-card cert-card" data-aos="fade-up" data-aos-delay="160">
+            <span class="cert-icon"><i class="fa-solid fa-cloud-arrow-up"></i></span>
+            <h4>ServiceNow University</h4>
+            <p>Basic Cloud Platform certification — 2,535 credits earned.</p>
+          </div>
+          <div class="glass-card cert-card" data-aos="fade-up" data-aos-delay="240">
+            <span class="cert-icon"><i class="fa-solid fa-sitemap"></i></span>
+            <h4>Forage Solution Architecture</h4>
+            <p>Job simulation covering real-world solution architecture practices.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Experience / Status Section ===================== -->
+    <section class="section" id="experience">
+      <div class="container">
+        <p class="section-tag">$ status --current</p>
+        <h2 class="section-title">Currently</h2>
+
+        <div class="status-grid">
+          <div class="glass-card status-card" data-aos="fade-up">
+            <i class="fa-solid fa-user-graduate"></i>
+            <h3>Final Year Student</h3>
+            <p>Wrapping up my B.Tech IT degree while building practical, real-world projects.</p>
+          </div>
+          <div class="glass-card status-card" data-aos="fade-up" data-aos-delay="80">
+            <i class="fa-solid fa-magnifying-glass-chart"></i>
+            <h3>Looking For</h3>
+            <p>A Software Development Internship to apply and grow my engineering skills.</p>
+          </div>
+          <div class="glass-card status-card" data-aos="fade-up" data-aos-delay="160">
+            <i class="fa-solid fa-layer-group"></i>
+            <h3>Open To</h3>
+            <div class="role-chips">
+              <span class="chip">Backend</span>
+              <span class="chip">Python</span>
+              <span class="chip">Full Stack</span>
+              <span class="chip">Cloud</span>
+              <span class="chip">SDE Intern</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== GitHub Stats Section ===================== -->
+    <section class="section section-alt" id="github" data-github-username="vasu">
+      <div class="container">
+        <p class="section-tag">$ git log --stats</p>
+        <h2 class="section-title">GitHub Stats</h2>
+        <p class="section-note">
+          These cards use the GitHub username from the section attribute and will update automatically when you swap it for your own profile.
+        </p>
+
+        <div class="github-grid">
+          <div class="glass-card github-card" data-aos="fade-up">
+            <img loading="lazy" src="https://github-readme-stats.vercel.app/api?username=YOUR_GITHUB_USERNAME&show_icons=true&theme=transparent&hide_border=true&title_color=8B5CF6&icon_color=06B6D4&text_color=E2E8F0" alt="GitHub stats" />
+          </div>
+          <div class="glass-card github-card" data-aos="fade-up" data-aos-delay="80">
+            <img loading="lazy" src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_GITHUB_USERNAME&layout=compact&theme=transparent&hide_border=true&title_color=8B5CF6&text_color=E2E8F0" alt="Top languages" />
+          </div>
+          <div class="glass-card github-card" data-aos="fade-up" data-aos-delay="160">
+            <img loading="lazy" src="https://streak-stats.demolab.com?user=YOUR_GITHUB_USERNAME&theme=transparent&hide_border=true&ring=8B5CF6&fire=06B6D4&currStreakLabel=E2E8F0" alt="GitHub streak" />
+          </div>
+          <div class="glass-card github-card github-contrib" data-aos="fade-up">
+            <img loading="lazy" src="https://ghchart.rshah.org/3B82F6/YOUR_GITHUB_USERNAME" alt="GitHub contribution chart" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Achievements Section ===================== -->
+    <section class="section" id="achievements">
+      <div class="container">
+        <p class="section-tag">$ echo $ACHIEVEMENTS</p>
+        <h2 class="section-title">Achievements</h2>
+
+        <div class="achieve-grid">
+          <div class="glass-card achieve-card" data-aos="zoom-in">
+            <i class="fa-solid fa-brain"></i>
+            <h3>Problem Solving</h3>
+          </div>
+          <div class="glass-card achieve-card" data-aos="zoom-in" data-aos-delay="80">
+            <i class="fa-solid fa-book-open-reader"></i>
+            <h3>Continuous Learning</h3>
+          </div>
+          <div class="glass-card achieve-card" data-aos="zoom-in" data-aos-delay="160">
+            <i class="fa-solid fa-cloud"></i>
+            <h3>Cloud Fundamentals</h3>
+          </div>
+          <div class="glass-card achieve-card" data-aos="zoom-in" data-aos-delay="240">
+            <i class="fa-solid fa-database"></i>
+            <h3>Database Knowledge</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===================== Contact Section ===================== -->
+    <section class="section section-alt" id="contact">
+      <div class="container">
+        <p class="section-tag">$ ./contact.sh</p>
+        <h2 class="section-title">Contact</h2>
+
+        <div class="contact-grid">
+          <div class="glass-card contact-info" data-aos="fade-right">
+            <h3>Let's talk</h3>
+            <p>Have an internship opening, a project, or just want to say hi? My inbox is open.</p>
+
+            <a href="mailto:hello@vasu.dev" class="contact-row">
+              <i class="fa-solid fa-envelope"></i> vasukalshyan@gmail.com
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noopener" class="contact-row">
+              <i class="fa-brands fa-github"></i>https://github.com/Vasu379332 
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noopener" class="contact-row">
+              <i class="fa-brands fa-linkedin"></i> https://www.linkedin.com/in/vasu-kalshyan-95431133b
+            </a>
+            <span class="contact-row contact-row-static">
+              <i class="fa-solid fa-location-dot"></i> India
+            </span>
+
+            <div class="socials">
+              <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+              <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+              <a href="https://x.com/" target="_blank" rel="noopener" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a>
+              <a href="mailto:hello@vasu.dev" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+          </div>
+
+          <form class="glass-card contact-form" id="contactForm" data-aos="fade-left" novalidate>
+            <div class="form-row">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" required />
+              <span class="form-error" data-error-for="name"></span>
+            </div>
+            <div class="form-row">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="you@example.com" required />
+              <span class="form-error" data-error-for="email"></span>
+            </div>
+            <div class="form-row">
+              <label for="subject">Subject</label>
+              <input type="text" id="subject" name="subject" placeholder="What's this about?" required />
+              <span class="form-error" data-error-for="subject"></span>
+            </div>
+            <div class="form-row">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="Write your message…" required></textarea>
+              <span class="form-error" data-error-for="message"></span>
+            </div>
+            <button type="submit" class="btn btn-primary form-submit">
+              <i class="fa-solid fa-paper-plane"></i> Send Message
+            </button>
+            <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ===================== Footer ===================== -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>Designed &amp; Developed by <span class="gradient-text">Vasu</span> · &copy; <span id="year"></span></p>
+      <div class="socials footer-socials">
+        <a href="https://github.com/" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="mailto:hello@vasu.dev" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <button id="backToTop" class="back-to-top" aria-label="Back to top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="js/script.js"></script>
+</body>
+</html>
